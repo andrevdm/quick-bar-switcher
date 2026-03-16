@@ -6,16 +6,21 @@ local function switch_quick_bar(player)
     local active_quick_bar = player.get_active_quick_bar_page(1)
 
     -- Cambiar entre las barras 1-4 y 5-8
-    if active_quick_bar <= 4 then
-        player.set_active_quick_bar_page(1, 5) -- Cambia a las barras 5-8
-        player.set_active_quick_bar_page(2, 6) -- Cambia a las barras 5-8
-        player.set_active_quick_bar_page(3, 7) -- Cambia a las barras 5-8
-        player.set_active_quick_bar_page(4, 8) -- Cambia a las barras 5-8
+    if active_quick_bar == 1 then
+        player.set_active_quick_bar_page(1, 4)
+        player.set_active_quick_bar_page(2, 10)
+        player.set_active_quick_bar_page(3, 5)
+        player.set_active_quick_bar_page(4, 6)
+    elseif active_quick_bar == 4 then
+        player.set_active_quick_bar_page(1, 7)
+        player.set_active_quick_bar_page(2, 10)
+        player.set_active_quick_bar_page(3, 8)
+        player.set_active_quick_bar_page(4, 9)
     else
-        player.set_active_quick_bar_page(1, 1) -- Cambia a las barras 1-4
-        player.set_active_quick_bar_page(2, 2) -- Cambia a las barras 1-4
-        player.set_active_quick_bar_page(3, 3) -- Cambia a las barras 1-4
-        player.set_active_quick_bar_page(4, 4) -- Cambia a las barras 1-4
+        player.set_active_quick_bar_page(1, 1)
+        player.set_active_quick_bar_page(2, 10)
+        player.set_active_quick_bar_page(3, 2)
+        player.set_active_quick_bar_page(4, 3)
     end
 end
 
